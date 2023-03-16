@@ -15,7 +15,8 @@
 
 .img-grid .lg-picture{
     grid-column: 1 / span 3;
-    background-image:url("../../Images/LargeCard/h1.webp");
+    // background-image:url("../../Images/LargeCard/h1.webp");
+    background-image: url('https://media.daft.ie/eyJidWNrZXQiOiJtZWRpYW1hc3Rlci1zM2V1IiwiZWRpdHMiOnsicmVzaXplIjp7ImZpdCI6ImNvdmVyIiwid2lkdGgiOjcyMCwiaGVpZ2h0Ijo0ODB9fSwib3V0cHV0Rm9ybWF0IjoianBlZyIsImtleSI6IjIvYy8yY2Q5NjBhYjY3MTQwZTY3ODA0MzEyYWFmOWNhNjIwMi5qcGcifQ==?signature=8570be41e29da7c96215d66a51315e095c62fd67442185e433c8c30d10cf4c2b');
     background-size:cover;
     position:relative;
 }
