@@ -1,4 +1,81 @@
+
 header{
+    background-color:var(--toastify-color-light);
+    // --padding-std:1rem;
+}
+
+.top-header{
+   
     display:flex;
-    
+    justify-content: space-between;
+    padding:var(--bd-padding);
+
+}
+
+.top-header .daft-logo{
+    width: 4.5rem;
+    height:auto;
+}
+
+.top-header .burger-menu{
+    width: 1.8rem;
+    height:auto;
+}
+
+.search-container{
+    display:flex;
+    row-gap:1.2rem;
+    flex-direction: column;
+}
+
+.search-container .location-input{
+    display:flex;
+    justify-content: space-between;
+    padding:var(--bd-padding);
+    background-color:var(--clr-backgrnd);
+    text-align:center;
+
+    margin-left:var(--bd-padding);
+    margin-right:var(--bd-padding);
+    border-radius: var(--br-normal);
+}
+
+.search-container .selected-loc{
+    color:var(--toastify-color-dark);
+    font-weight: var(--fw-medium);
+}
+
+.search-container .add-loc{
+    color:var(--toastify-text-color-light);
+    font-weight: var(--fw-medium);
+}
+
+
+.search-container .filters{
+    display: flex;
+}
+
+.filters > *{
+    padding:1rem;
+    color:var(--toastify-spinner-color);
+    // font-weight: var(--fw-thin);
+    font-weight:600;
+    font-size:0.8rem;
+
+    border:1px solid var(--clr-backgrnd);
+}
+
+.filters .heart-icon{
+    width:3.2rem;
+    height:auto;
+}
+
+
+
+.filters .price-selector,.filters .beds-selector{
+    flex-basis:100%;
+}
+
+.filters .filters-toggle, .filters .save-button{
+    flex-basis:min-content;
 }

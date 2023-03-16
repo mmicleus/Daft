@@ -1,3 +1,8 @@
 .hidden{
     display:none;
 }
+
+.flex-container{
+    display:flex;
+    gap:var(--flx-gap);
+}

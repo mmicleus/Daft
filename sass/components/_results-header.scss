@@ -1,0 +1,30 @@
+.results-header{
+    display:flex;
+    padding:2rem var(--bd-padding);
+}
+
+.results-header > .nr-of-properties{
+    flex-basis:100%;
+    color:var(--toastify-color-dark);
+    font-weight: var(--fw-medium);
+    font-size:0.8rem;
+}
+
+.results-header > .map-button{
+    flex-basis:min-content;
+    display:grid;
+    place-content:center;
+
+    padding-left: 1rem;
+    padding-right:1rem;
+    padding-top:0.5rem;
+    padding-bottom:0.5rem;
+
+    border: 1px solid var(--toastify-spinner-color);
+    background-color:var(--toastify-toast-background);
+    border-radius: var(--br-normal);
+
+    color:var(--toastify-color-dark);
+}
+
+

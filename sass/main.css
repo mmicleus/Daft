@@ -117,12 +117,235 @@ select {
   --toastify-color-progress-warning: var(--toastify-color-warning);
   --toastify-color-progress-error: var(--toastify-color-error);
   --clr-backgrnd: #f0f0f0;
+  --transp-black: rgba(0,0,0,0.8);
+  --fw-thick: 800;
+  --fw-medium:600;
+  --fw-thin:300;
+  --bd-padding:1rem;
+  --br-normal:0.2rem;
+  --flx-gap:1rem;
+  --card-gap:2rem;
 }
 
 .hidden {
   display: none;
 }
 
-header {
+.flex-container {
   display: flex;
+  gap: var(--flx-gap);
+}
+
+header {
+  background-color: var(--toastify-color-light);
+}
+
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--bd-padding);
+}
+
+.top-header .daft-logo {
+  width: 4.5rem;
+  height: auto;
+}
+
+.top-header .burger-menu {
+  width: 1.8rem;
+  height: auto;
+}
+
+.search-container {
+  display: flex;
+  row-gap: 1.2rem;
+  flex-direction: column;
+}
+
+.search-container .location-input {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--bd-padding);
+  background-color: var(--clr-backgrnd);
+  text-align: center;
+  margin-left: var(--bd-padding);
+  margin-right: var(--bd-padding);
+  border-radius: var(--br-normal);
+}
+
+.search-container .selected-loc {
+  color: var(--toastify-color-dark);
+  font-weight: var(--fw-medium);
+}
+
+.search-container .add-loc {
+  color: var(--toastify-text-color-light);
+  font-weight: var(--fw-medium);
+}
+
+.search-container .filters {
+  display: flex;
+}
+
+.filters > * {
+  padding: 1rem;
+  color: var(--toastify-spinner-color);
+  font-weight: 600;
+  font-size: 0.8rem;
+  border: 1px solid var(--clr-backgrnd);
+}
+
+.filters .heart-icon {
+  width: 3.2rem;
+  height: auto;
+}
+
+.filters .price-selector, .filters .beds-selector {
+  flex-basis: 100%;
+}
+
+.filters .filters-toggle, .filters .save-button {
+  flex-basis: min-content;
+}
+
+.results-header {
+  display: flex;
+  padding: 2rem var(--bd-padding);
+}
+
+.results-header > .nr-of-properties {
+  flex-basis: 100%;
+  color: var(--toastify-color-dark);
+  font-weight: var(--fw-medium);
+  font-size: 0.8rem;
+}
+
+.results-header > .map-button {
+  flex-basis: min-content;
+  display: grid;
+  place-content: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border: 1px solid var(--toastify-spinner-color);
+  background-color: var(--toastify-toast-background);
+  border-radius: var(--br-normal);
+  color: var(--toastify-color-dark);
+}
+
+.large-card {
+  background-color: var(--toastify-color-light);
+}
+
+.img-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 15rem 6rem;
+  gap: 0.2rem;
+}
+
+.img-grid div {
+  background-color: gray;
+}
+
+.img-grid .lg-picture {
+  grid-column: 1/span 3;
+  background-image: url("../../Images/LargeCard/h1.webp");
+  background-size: cover;
+  position: relative;
+}
+
+.img-grid .sm-picture:nth-child(2) {
+  background-image: url("../../Images/LargeCard/h2.webp");
+  background-size: cover;
+}
+
+.img-grid .sm-picture:nth-child(3) {
+  background-image: url("../../Images/LargeCard/h3.webp");
+  background-size: cover;
+}
+
+.img-grid .sm-picture:nth-child(4) {
+  background-image: url("../../Images/LargeCard/h4.webp");
+  background-size: cover;
+}
+
+.img-grid .lg-picture::before {
+  content: "VIEWING ADVISED";
+  position: absolute;
+  left: 1rem;
+  bottom: 1rem;
+  width: 40%;
+  font-size: 0.9rem;
+  color: var(--toastify-color-light);
+  background: var(--transp-black);
+  text-align: center;
+  font-weight: 600;
+}
+
+.lg-card-footer {
+  padding: 1rem var(--bd-padding) 2.5rem var(--bd-padding);
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.6rem;
+}
+
+.lg-card-footer .adv-checkmark {
+  text-transform: uppercase;
+  color: var(--toastify-color-success);
+  font-weight: 600;
+  letter-spacing: 0.05rem;
+  font-size: 0.7rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.4rem;
+}
+
+.lg-card-footer .adv-checkmark > img {
+  width: 1rem;
+  height: auto;
+}
+
+.house-location,
+.house-price {
+  display: block;
+}
+
+.lg-card-footer .house-location {
+  color: var(--toastify-color-dark);
+  font-weight: 600;
+}
+
+.lg-card-footer .house-price {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--toastify-color-dark);
+}
+
+.lg-card-footer .energy-rating-logo {
+  align-self: end;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2rem;
+}
+
+.card-footer > a {
+  text-decoration: none;
+  color: var(--toastify-color-info);
+}
+
+.card-footer .card-heart {
+  width: 1.8rem;
+  height: auto;
+}
+
+.houses-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--card-gap);
+  overflow-y: scroll;
 }/*# sourceMappingURL=main.css.map */
