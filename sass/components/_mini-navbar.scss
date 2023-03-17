@@ -1,0 +1,16 @@
+.mini-nav{
+    display: flex;
+    flex-wrap:wrap;
+    font-size:0.7rem;
+    background-color: var(--toastify-color-light);
+
+    padding:0.9rem var(--bd-padding);
+    line-height:1.2rem;
+    border-top: 1px solid #aaa8a8;
+    border-bottom: 1px solid #aaa8a8;
+}
+
+.mini-nav > .site-location-end{
+    color:#d0cece;
+}
+

@@ -1,0 +1,7 @@
+.houses-container{
+    display:flex;
+    flex-direction: column;
+    row-gap:var(--card-gap);
+
+    overflow-y: scroll;
+}

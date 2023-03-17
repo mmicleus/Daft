@@ -348,4 +348,62 @@ header {
   flex-direction: column;
   row-gap: var(--card-gap);
   overflow-y: scroll;
+}
+
+.pageIndex-container {
+  display: flex;
+  justify-content: center;
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
+  font-size: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.pageIndex-footer {
+  margin: 1.5rem 0;
+}
+
+.pageIndex-container > button {
+  border-radius: var(--br-normal);
+  font-weight: 600;
+}
+
+.pageIndex-container > .lg-btn {
+  padding: 0.3rem 1rem;
+  background-color: var(--toastify-color-light);
+  border: 1px solid var(--toastify-spinner-color);
+}
+
+.pageIndex-container > .index-btn {
+  padding: 0.3rem 1rem;
+  background-color: var(--toastify-color-info);
+  border-style: none;
+  color: var(--toastify-color-light);
+}
+
+.pageIndex-footer > .showing {
+  display: block;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--toastify-spinner-color);
+}
+
+.mini-nav {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.mini-nav {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 0.7rem;
+  background-color: var(--toastify-color-light);
+  padding: 0.9rem var(--bd-padding);
+  line-height: 1.2rem;
+  border-top: 1px solid #aaa8a8;
+  border-bottom: 1px solid #aaa8a8;
+}
+
+.mini-nav > .site-location-end {
+  color: #d0cece;
 }/*# sourceMappingURL=main.css.map */
