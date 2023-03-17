@@ -1,0 +1,21 @@
+.links-container{
+    padding:0 var(--bd-padding) !important;
+
+    display: grid;
+    grid-template-columns:repeat(2,1fr);
+    column-gap:2rem;
+    row-gap:0.8rem;
+    margin:2rem 0 !important;
+}
+
+.links-container a{
+    font-size: 0.8rem;
+    font-weight: 500;
+    color:var(--toastify-color-dark);
+    text-decoration: none;
+}
+
+
+
+
+

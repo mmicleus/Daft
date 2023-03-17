@@ -1,0 +1,29 @@
+.trademark-footer{
+    display:flex;
+    gap:0.5rem;
+    padding:0 var(--bd-padding);
+    margin-bottom:1rem;
+}
+
+.trademark-footer .trademark{
+    display: flex;
+    flex-direction: column;
+    font-size:0.65rem;
+}
+
+.family-logo{
+    margin:0 var(--bd-padding);
+}
+
+.other-sites{
+    font-size:0.75rem;
+    color:var(--toastify-text-color-light);
+    padding:0 var(--bd-padding);
+    margin-top:0.5rem;
+    margin-bottom:2rem;
+}
+
+.other-sites span{
+    color:var(--toastify-color-dark);
+}
+
