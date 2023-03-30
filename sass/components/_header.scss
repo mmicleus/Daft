@@ -9,6 +9,7 @@ header{
     display:flex;
     justify-content: space-between;
     padding:var(--bd-padding);
+    position:relative;
 
 }
 
@@ -17,10 +18,87 @@ header{
     height:auto;
 }
 
-.top-header .burger-menu{
-    width: 1.8rem;
-    height:auto;
+
+@media screen and (max-width:650px){
+    .navbar{
+            position:absolute;
+            background-color:#fff;
+            // makes the navbar invisible
+            z-index:-1;
+            opacity:0;
+            top:-1000px;
+
+            
+            display:flex;
+            flex-direction:column;
+            width:100%;
+            height:50vh;
+            left:0;
+            text-align:center;
+            transition: all 0.5s ease-in-out;
+    }
+
+    .navbar.active{
+        z-index:999;
+        opacity:1;
+        top:100%;
+        // transition: all 0.5s ease-in-out;
+    
+    }
+
+    .navbar .categories{
+            display:flex;
+            flex-direction:column;
+        
+    }
+
+    .navbar span{
+            font-size:1.2rem;
+            font-weight: 400;
+            margin:0.6rem 0;
+        
+    }
+
+    .navbar span a{
+        text-decoration: none;
+        color:var(--toastify-color-info);
+
+    }
+
+    .navbar .actions{
+        display:flex;
+        flex-direction: column;
+    }
+
+    .burger-menu{
+        display:flex;
+        flex-direction: column;
+        // transform:rotate(90deg);
+    }
+
+    .burger-menu .bar{
+        background-color: black;
+        width:20px;
+        height: 2px;
+        display: inline-block;
+        margin:2px 0;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .burger-menu.active .bar:nth-child(1){
+        transform: rotate(45deg) translateY(9px);
+    }
+
+    .burger-menu.active .bar:nth-child(2){
+        opacity:0;
+    }
+
+    .burger-menu.active .bar:nth-child(3){
+        transform: rotate(-45deg) translateY(-9px);
+    }
 }
+
+
 
 .search-container{
     display:flex;
@@ -53,6 +131,9 @@ header{
 
 .search-container .filters{
     display: flex;
+
+    position:sticky;
+    top:0;
 }
 
 .filters > *{
@@ -69,6 +150,8 @@ header{
     width:3.2rem;
     height:auto;
 }
+
+
 
 
 
