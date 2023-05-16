@@ -6,7 +6,8 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="./sass/main.css">
+        <link rel="stylesheet" href="./css/main.css">
+        <script src="https://kit.fontawesome.com/c9b9c614f8.js" crossorigin="anonymous"></script>
     </head>
     <body>
 
@@ -54,6 +55,92 @@
                         <span class="beds-selector">Beds</span>
                         <span class="filters-toggle">Filters</span>
                         <img class="heart-icon" src="Images/heart.svg" alt="">
+
+                        <div class="filters__rangeSelector hide" id="price-picker-container">
+                            <div class="minmaxContainer">
+                                <div tabindex="0" class="min-input custom-input price_min_input" id="min-input-price" data-title="Min">Min</div>
+                                <span>To</span>
+                                <div tabindex="0" class="max-input custom-input price_max_input" id="max-input-price" data-title="Max">Max</div>
+                            </div>
+                            <button class="done-btn">Done</button>
+                        </div>
+
+                        <div class="filters__rangeSelector hide" id="beds-picker-container">
+                            <div class="minmaxContainer">
+                                <div tabindex="0" class="min-input  custom-input beds_min_input" id="min-input-beds" data-title="Min">Min</div>
+                                <span>To</span>
+                                <div tabindex="0" class="max-input custom-input beds_max_input" id="max-input-beds" data-title="Max">Max</div>
+                            </div>
+                            <button class="done-btn">Done</button>
+                        </div>
+
+                        <div class="filters__rangeSelector hide" id="filter-picker-container">
+                            <div class="minmaxContainer">
+                                <div tabindex="0" class="min-input custom-input">Min</div>
+                                <span>To</span>
+                                <div tabindex="0" class="max-input custom-input">Max</div>
+                            </div>
+                            <button class="done-btn">Done</button>
+                        </div>
+
+                        <!-- <div class="range-panel priceRangePanel">
+                            <div class="panel-option"><span>Min</span><i class="fa-regular fa-circle-dot radio-btn"></i></div>
+                            <div class="panel-option"><span>Min</span><i class="fa-regular fa-circle-dot radio-btn"></i></div>
+                            <div class="panel-option"><span>Min</span><i class="fa-regular fa-circle-dot radio-btn"></i></div>
+                            <div class="panel-option"><span>Min</span><i class="fa-regular fa-circle-dot radio-btn"></i></div>
+                            <div class="panel-option"><span>Min</span><i class="fa-regular fa-circle-dot radio-btn"></i></div>
+                            <div class="panel-option"><span>Min</span><i class="fa-regular fa-circle-dot radio-btn"></i></div>
+                        </div> -->
+
+                        <div class="range-panel hide" id="min-price-panel">
+                            <!-- <div class="panel-option"><span>Min</span><i class="fa-regular fa-circle-dot radio-btn"></i></div>
+                            <div class="panel-option"><span>25k</span><i class="fa-regular fa-circle-dot radio-btn"></i></div>
+                            <div class="panel-option"><span>2</span><i class="fa-regular fa-circle-dot radio-btn"></i></div>
+                            <div class="panel-option"><span>3</span><i class="fa-regular fa-circle-dot radio-btn"></i></div>
+                            <div class="panel-option"><span>4</span><i class="fa-regular fa-circle-dot radio-btn"></i></div>
+                            <div class="panel-option"><span>5</span><i class="fa-regular fa-circle-dot radio-btn"></i></div>
+                            <div class="panel-option"><span>6</span><i class="fa-regular fa-circle-dot radio-btn"></i></div>
+                            <div class="panel-option"><span>7</span><i class="fa-regular fa-circle-dot radio-btn"></i></div>
+                            <div class="panel-option"><span>8</span><i class="fa-regular fa-circle-dot radio-btn"></i></div>
+                            <div class="panel-option"><span>9</span><i class="fa-regular fa-circle-dot radio-btn"></i></div>
+                            <div class="panel-option"><span>10</span><i class="fa-regular fa-circle-dot radio-btn"></i></div>
+                            <div class="panel-option"><span>11</span><i class="fa-regular fa-circle-dot radio-btn"></i></div>
+                            <div class="panel-option"><span>12</span><i class="fa-regular fa-circle-dot radio-btn"></i></div>
+                            <div class="panel-option"><span>13</span><i class="fa-regular fa-circle-dot radio-btn"></i></div>
+                            <div class="panel-option"><span>14</span><i class="fa-regular fa-circle-dot radio-btn"></i></div>
+                            <div class="panel-option"><span>15</span><i class="fa-regular fa-circle-dot radio-btn"></i></div> -->
+                        </div>
+
+                        <div class="range-panel hide" id="max-price-panel">
+                            <!-- <div class="panel-option"><span>Max</span><i class="fa-regular fa-circle-dot radio-btn"></i></div>
+                            <div class="panel-option"><span>1</span><i class="fa-regular fa-circle-dot radio-btn"></i></div>
+                            <div class="panel-option"><span>2</span><i class="fa-regular fa-circle-dot radio-btn"></i></div>
+                            <div class="panel-option"><span>3</span><i class="fa-regular fa-circle-dot radio-btn"></i></div>
+                            <div class="panel-option"><span>4</span><i class="fa-regular fa-circle-dot radio-btn"></i></div>
+                            <div class="panel-option"><span>5</span><i class="fa-regular fa-circle-dot radio-btn"></i></div>
+                            <div class="panel-option"><span>6</span><i class="fa-regular fa-circle-dot radio-btn"></i></div>
+                            <div class="panel-option"><span>7</span><i class="fa-regular fa-circle-dot radio-btn"></i></div>
+                            <div class="panel-option"><span>8</span><i class="fa-regular fa-circle-dot radio-btn"></i></div>
+                            <div class="panel-option"><span>9</span><i class="fa-regular fa-circle-dot radio-btn"></i></div>
+                            <div class="panel-option"><span>10</span><i class="fa-regular fa-circle-dot radio-btn"></i></div>
+                            <div class="panel-option"><span>11</span><i class="fa-regular fa-circle-dot radio-btn"></i></div>
+                            <div class="panel-option"><span>12</span><i class="fa-regular fa-circle-dot radio-btn"></i></div>
+                            <div class="panel-option"><span>13</span><i class="fa-regular fa-circle-dot radio-btn"></i></div>
+                            <div class="panel-option"><span>14</span><i class="fa-regular fa-circle-dot radio-btn"></i></div>
+                            <div class="panel-option"><span>15</span><i class="fa-regular fa-circle-dot radio-btn"></i></div> -->
+                        </div>
+
+                        <div class="range-panel hide" id="min-beds-panel">
+                        </div>
+
+                        <div class="range-panel hide" id="max-beds-panel">
+                        </div>
+       
+
+
+                        
+
+                       
                         <!-- <span class="save-button"><img src="Images/heart.png" alt=""></span> -->
                     </div>
     
@@ -81,7 +168,7 @@
                                     <div class="lg-picture"><img src="Images/LargeCard/h3.webp" alt=""></div>
                                     <div class="lg-picture"><img src="Images/LargeCard/h4.webp" alt=""></div> -->
 
-                                    <div class="lg-picture"></div>
+                                    <div class="lg-picture" ></div>
                                     <div class="sm-picture"></div>
                                     <div class="sm-picture"></div>
                                     <div class="sm-picture"></div>
@@ -217,15 +304,15 @@
                         <div class="pageIndex-footer">
                             <div class="pageIndex-container">
                                 <button class="lg-btn prev-btn">&lt; Prev</button>
-                                <button class="index-btn">1</button>
+                                <button class="index-btn m" id="middle-btn">1</button>
                                 <button class="index-btn hidden">2</button>
                                 <button class="index-btn hidden" >3</button>
                                 <button class="index-btn hidden">...</button>
                                 <button class="index-btn hidden">9</button>
-                                <button class="lg-btn prev-btn">Next &gt;</button>
+                                <button class="lg-btn next-btn">Next &gt;</button>
                             </div>
 
-                            <span class="showing">Showing 1 - 20 of 161</span>
+                            <span class="showing">Showing <span class="start-index">1</span> - <span class="last-index">20</span>  of <span class="total-properties">161</span></span>
                         </div>
                     </div>
 
@@ -285,6 +372,6 @@
         </main>
 
         <footer></footer>
-        <script src="app.js" async defer></script>
+        <script type="module" src="js/app.js" async defer></script>
     </body>
 </html>

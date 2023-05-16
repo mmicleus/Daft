@@ -13,31 +13,35 @@
     background-color: gray;
 }
 
+.img-grid .picture{
+    background-size: cover;
+}
+
 .img-grid .lg-picture{
     grid-column: 1 / span 3;
     // background-image:url("../../Images/LargeCard/h1.webp");
-    background-image: url('https://media.daft.ie/eyJidWNrZXQiOiJtZWRpYW1hc3Rlci1zM2V1IiwiZWRpdHMiOnsicmVzaXplIjp7ImZpdCI6ImNvdmVyIiwid2lkdGgiOjcyMCwiaGVpZ2h0Ijo0ODB9fSwib3V0cHV0Rm9ybWF0IjoianBlZyIsImtleSI6IjIvYy8yY2Q5NjBhYjY3MTQwZTY3ODA0MzEyYWFmOWNhNjIwMi5qcGcifQ==?signature=8570be41e29da7c96215d66a51315e095c62fd67442185e433c8c30d10cf4c2b');
+    // background-image: url('https://media.daft.ie/eyJidWNrZXQiOiJtZWRpYW1hc3Rlci1zM2V1IiwiZWRpdHMiOnsicmVzaXplIjp7ImZpdCI6ImNvdmVyIiwid2lkdGgiOjcyMCwiaGVpZ2h0Ijo0ODB9fSwib3V0cHV0Rm9ybWF0IjoianBlZyIsImtleSI6IjIvYy8yY2Q5NjBhYjY3MTQwZTY3ODA0MzEyYWFmOWNhNjIwMi5qcGcifQ==?signature=8570be41e29da7c96215d66a51315e095c62fd67442185e433c8c30d10cf4c2b');
     background-size:cover;
     position:relative;
 }
 
 .img-grid .sm-picture:nth-child(2){
     // background-image:url("../../Images/LargeCard/h2.webp");
-    background-image: url('https://media.daft.ie/eyJidWNrZXQiOiJtZWRpYW1hc3Rlci1zM2V1IiwiZWRpdHMiOnsicmVzaXplIjp7ImZpdCI6ImNvdmVyIiwid2lkdGgiOjM2MCwiaGVpZ2h0IjoyNDB9fSwib3V0cHV0Rm9ybWF0IjoianBlZyIsImtleSI6ImQvYi9kYjUxNDQ0MTZmMDk1NzIwMzQ2NWQzMTgyMzQ4MjkyOC5qcGcifQ==?signature=ee802cfa28fc3216c810db1963c68cf115d1ed27c201b95698360e7a222091d4');
+    // background-image: url('https://media.daft.ie/eyJidWNrZXQiOiJtZWRpYW1hc3Rlci1zM2V1IiwiZWRpdHMiOnsicmVzaXplIjp7ImZpdCI6ImNvdmVyIiwid2lkdGgiOjM2MCwiaGVpZ2h0IjoyNDB9fSwib3V0cHV0Rm9ybWF0IjoianBlZyIsImtleSI6ImQvYi9kYjUxNDQ0MTZmMDk1NzIwMzQ2NWQzMTgyMzQ4MjkyOC5qcGcifQ==?signature=ee802cfa28fc3216c810db1963c68cf115d1ed27c201b95698360e7a222091d4');
     background-size:cover;
 }
 
 .img-grid .sm-picture:nth-child(3){
     // background-image:url("../../Images/LargeCard/h3.webp");
 
-    background-image: url('https://media.daft.ie/eyJidWNrZXQiOiJtZWRpYW1hc3Rlci1zM2V1IiwiZWRpdHMiOnsicmVzaXplIjp7ImZpdCI6ImNvdmVyIiwid2lkdGgiOjM2MCwiaGVpZ2h0IjoyNDB9fSwib3V0cHV0Rm9ybWF0IjoianBlZyIsImtleSI6IjcvYi83YmMwMDBhYzEzNmVjMGVkYWE5OGYzNDEzZmY4OWM0Ny5qcGcifQ==?signature=97af32b24103a7eaa7f416df530ec520a3c141aeb67132cae6e48ca3ae091446');
+    // background-image: url('https://media.daft.ie/eyJidWNrZXQiOiJtZWRpYW1hc3Rlci1zM2V1IiwiZWRpdHMiOnsicmVzaXplIjp7ImZpdCI6ImNvdmVyIiwid2lkdGgiOjM2MCwiaGVpZ2h0IjoyNDB9fSwib3V0cHV0Rm9ybWF0IjoianBlZyIsImtleSI6IjcvYi83YmMwMDBhYzEzNmVjMGVkYWE5OGYzNDEzZmY4OWM0Ny5qcGcifQ==?signature=97af32b24103a7eaa7f416df530ec520a3c141aeb67132cae6e48ca3ae091446');
     background-size:cover;
 }
 
 .img-grid .sm-picture:nth-child(4){
     // background-image:url("../../Images/LargeCard/h4.webp");
 
-    background-image: url('https://media.daft.ie/eyJidWNrZXQiOiJtZWRpYW1hc3Rlci1zM2V1IiwiZWRpdHMiOnsicmVzaXplIjp7ImZpdCI6ImNvdmVyIiwid2lkdGgiOjM2MCwiaGVpZ2h0IjoyNDB9fSwib3V0cHV0Rm9ybWF0IjoianBlZyIsImtleSI6IjYvNi82NjM2OWNlNjBiODkwNWM0YTlhNzA2Y2NmYTIzN2UzOC5qcGcifQ==?signature=0c8552ef5661636607f48708a856258efa7104e9d6bba57e8411956aad34204e');
+    // background-image: url('https://media.daft.ie/eyJidWNrZXQiOiJtZWRpYW1hc3Rlci1zM2V1IiwiZWRpdHMiOnsicmVzaXplIjp7ImZpdCI6ImNvdmVyIiwid2lkdGgiOjM2MCwiaGVpZ2h0IjoyNDB9fSwib3V0cHV0Rm9ybWF0IjoianBlZyIsImtleSI6IjYvNi82NjM2OWNlNjBiODkwNWM0YTlhNzA2Y2NmYTIzN2UzOC5qcGcifQ==?signature=0c8552ef5661636607f48708a856258efa7104e9d6bba57e8411956aad34204e');
     background-size:cover;
 }
 

@@ -131,12 +131,15 @@ header{
 
 .search-container .filters{
     display: flex;
+    position:relative;
 
-    position:sticky;
-    top:0;
+   // position:sticky;
+    // top:0;
 }
 
-.filters > *{
+.filters .price-selector,.filters .beds-selector,.filters .filters-toggle,.filters .heart-icon{
+
+    cursor:pointer;
     padding:1rem;
     color:var(--toastify-spinner-color);
     // font-weight: var(--fw-thin);
@@ -151,6 +154,13 @@ header{
     height:auto;
 }
 
+.filters .price-selector,.filters .beds-selector{
+
+    &.selected{
+        border-bottom:none;
+    }
+}
+
 
 
 
@@ -162,3 +172,97 @@ header{
 .filters .filters-toggle, .filters .save-button{
     flex-basis:min-content;
 }
+
+.filters{
+    &__rangeSelector{
+        position:absolute;
+        top:100%;
+        left:0;
+        right:0;
+        // height:4rem;
+        background-color: #fff;
+        z-index:100;
+
+        &.hide{
+            display:none;
+        }
+
+        padding: 1rem;
+    }
+
+    .minmaxContainer{
+        display:flex;
+        justify-content: space-between;
+        margin-bottom:1rem;
+
+        span{
+            display: flex;
+            align-items: center;
+        }
+
+        .min-input,
+        .max-input{
+            width:40%;
+        }
+    }
+
+    .done-btn{
+        padding:0.5rem;
+        border-radius:5px;
+        color:#444343;
+        font-weight: 600;
+        cursor:pointer;
+        border: 1px solid #7e7c7c;
+        width:60%;
+        display:block;
+        margin-left:auto;
+        margin-right:auto;
+        background-color: #fff;
+        text-align: center;
+    }
+
+    .range-panel{
+        background: #fff;
+        position: fixed;
+        top:0rem;
+        bottom:0rem;
+        left:1rem;
+        right:1rem;
+        z-index:101;
+        border-radius:20px;
+        border:1px solid #000;
+        overflow:auto;
+
+        .panel-option{
+            display: flex;
+            justify-content: space-between;
+            padding:1rem;
+            font-size:1.3rem;
+
+            span{
+                color:#000;
+            }
+            
+            .radio-btn{
+                width:1.5rem;
+                color:#0b6a77;
+            }
+
+            &:not(:nth-last-child(1)){
+                border-bottom: 1px solid #7e7c7c;
+            }
+        }
+
+        &.hide{
+            display: none;
+        }
+
+
+        
+    }
+
+    
+
+    
+}
+
