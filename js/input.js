@@ -83,7 +83,7 @@ export function handleOptionClick(event){
     let elem = document.querySelector(`.${param}_input`);
     elem.textContent = Utility.formatValue(value,param);
 
-    setParameter(event)
+    setParameter(event);
 }
 
 export function handleTopOptionClick(event){
