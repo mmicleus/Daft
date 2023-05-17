@@ -1,9 +1,12 @@
+import * as Utility from './utilities.js';
+import * as Data from './data.js';
+
 export let jsonResponse;
 const HousesForSaleQueryUrl = 'https://us-real-estate.p.rapidapi.com/v2/for-sale';
 
 export let queryParameters = 
     {
-        offset: '42' ,
+        offset: '0' ,
         limit: '42',
         state_code:'MI',
         city:'Detroit',
@@ -48,7 +51,7 @@ export let queryParameters =
 
 
 
-async function makeRequest(url){
+export async function makeRequest(url){
     // const url = 'https://us-real-estate.p.rapidapi.com/v2/for-sale?offset=0&limit=42&state_code=MI&city=Detroit&sort=newest';
 const options = {
 	method: 'GET',
@@ -71,20 +74,78 @@ try {
 }
 
 export async function getProperties(){
-   return makeRequest(getQueryUrl(queryParameters));
+    // let url = createUrl(Data.propertySearchUrl,Utility.getPropertyQueryParams);
+
+//    return makeRequest(getQueryUrl(queryParameters));
+    let url = getQueryUrl();
+
+    console.log("URL:" + url);
+
+    return makeRequest(url);
 }
 
-function getQueryUrl(queryParameters){
-    let result = HousesForSaleQueryUrl;
-    result = result + '?';
-    let parameters=[];
+// function getQueryUrl(queryParameters){
+//     let result = HousesForSaleQueryUrl;
+//     result = result + '?';
+//     let parameters=[];
     
-    for(let key in queryParameters){
-        if(!queryParameters[key]) continue;
-        parameters.push(`${key}=${queryParameters[key]}`)
+//     for(let key in queryParameters){
+//         if(!queryParameters[key]) continue;
+//         parameters.push(`${key}=${queryParameters[key]}`)
+//     }
+
+//     result = result + parameters.join('&');
+
+//     return result;
+// }
+
+function getQueryUrl(){
+    let url = Utility.createUrl(Data.propertySearchUrl,Data.getPropertyQueryParams());
+
+    return url;
+}
+
+export async function getSuggestions(url){
+    const options = {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': '37256c6cb7msh9b684b1ec1f3258p178571jsnc1f57c4545a6',
+            'X-RapidAPI-Host': 'us-real-estate.p.rapidapi.com'
+        }
+    };
+
+    try {
+        const response = await fetch(url, options);
+        const result = await response.json();
+
+        console.log("suggestions:");
+
+        console.log(result);
+
+        return result.data;
+       // console.log(result);
+    } catch (error) {
+        console.error(error);
     }
+}
 
-    result = result + parameters.join('&');
+export async function getNrOfProperties(url){
 
-    return result;
+    const options = {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': '37256c6cb7msh9b684b1ec1f3258p178571jsnc1f57c4545a6',
+            'X-RapidAPI-Host': 'us-real-estate.p.rapidapi.com'
+        }
+    };
+    
+    try {
+        const response = await fetch(url, options);
+        let jsonResponse = await response.json();
+        console.log("JSON RESPONSE:");
+        console.log(jsonResponse);
+        return jsonResponse.data.home_search.total;
+    } catch (error) {
+        console.error(error);
+    }
 }

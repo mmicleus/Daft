@@ -74,60 +74,59 @@
                             <button class="done-btn">Done</button>
                         </div>
 
-                        <div class="filters__rangeSelector hide" id="filter-picker-container">
+                        <div class="filters-view">
+                          <div class="close-container"><i class="fa-solid fa-x filters-view__close"></i></div>  
+                            <div class="inputs-container">
+                                <div class="input-trigger">
+                                    <span>Skerries</span> <span>+ Add locations</span>
+                                </div>
+                                <!-- Locations input container -->
+                                <div class="locations-input-container hide">
+                                    <div class="location-cards-container">
+                                        <div class="location-card">
+                                            <span>Navan (&Surrounds), Meath</span>
+                                        </div>
+                                        <div class="location-card">
+                                            <span>Navan</span>
+                                        </div>
+                                    </div>
+                                    <input autofocus type="text" id="location-input" class="locations-input">
+                                    <div class="btn-container"><button type="button" class="filters-view__btn">Done</button></div>
+                        
+                                <!-- suggestions dropdown -->
+                                <div class="suggestions-list hide">
+                                    <div class="suggestion"><span>New York</span> <i class="fa-solid fa-plus"></i></div>
+                                    <div class="suggestion"><span>New York</span> <i class="fa-solid fa-plus"></i></div>
+                                    <div class="suggestion"><span>New York</span> <i class="fa-solid fa-plus"></i></div>
+                                    <div class="suggestion"><span>New York</span> <i class="fa-solid fa-plus"></i></div>
+                                </div>
+                        
+                                </div>
+
+
+
+                                <!-- End of Locations input container -->
+                            </div>
+                            <div class="totalPropertiesDisplay_container"><div class="totalPropertiesDisplay">100</div></div>
+                        </div>
+
+                        <!-- <div class="filters__rangeSelector hide" id="filter-picker-container">
                             <div class="minmaxContainer">
                                 <div tabindex="0" class="min-input custom-input">Min</div>
                                 <span>To</span>
                                 <div tabindex="0" class="max-input custom-input">Max</div>
                             </div>
                             <button class="done-btn">Done</button>
-                        </div>
-
-                        <!-- <div class="range-panel priceRangePanel">
-                            <div class="panel-option"><span>Min</span><i class="fa-regular fa-circle-dot radio-btn"></i></div>
-                            <div class="panel-option"><span>Min</span><i class="fa-regular fa-circle-dot radio-btn"></i></div>
-                            <div class="panel-option"><span>Min</span><i class="fa-regular fa-circle-dot radio-btn"></i></div>
-                            <div class="panel-option"><span>Min</span><i class="fa-regular fa-circle-dot radio-btn"></i></div>
-                            <div class="panel-option"><span>Min</span><i class="fa-regular fa-circle-dot radio-btn"></i></div>
-                            <div class="panel-option"><span>Min</span><i class="fa-regular fa-circle-dot radio-btn"></i></div>
                         </div> -->
 
+                        
+
                         <div class="range-panel hide" id="min-price-panel">
-                            <!-- <div class="panel-option"><span>Min</span><i class="fa-regular fa-circle-dot radio-btn"></i></div>
-                            <div class="panel-option"><span>25k</span><i class="fa-regular fa-circle-dot radio-btn"></i></div>
-                            <div class="panel-option"><span>2</span><i class="fa-regular fa-circle-dot radio-btn"></i></div>
-                            <div class="panel-option"><span>3</span><i class="fa-regular fa-circle-dot radio-btn"></i></div>
-                            <div class="panel-option"><span>4</span><i class="fa-regular fa-circle-dot radio-btn"></i></div>
-                            <div class="panel-option"><span>5</span><i class="fa-regular fa-circle-dot radio-btn"></i></div>
-                            <div class="panel-option"><span>6</span><i class="fa-regular fa-circle-dot radio-btn"></i></div>
-                            <div class="panel-option"><span>7</span><i class="fa-regular fa-circle-dot radio-btn"></i></div>
-                            <div class="panel-option"><span>8</span><i class="fa-regular fa-circle-dot radio-btn"></i></div>
-                            <div class="panel-option"><span>9</span><i class="fa-regular fa-circle-dot radio-btn"></i></div>
-                            <div class="panel-option"><span>10</span><i class="fa-regular fa-circle-dot radio-btn"></i></div>
-                            <div class="panel-option"><span>11</span><i class="fa-regular fa-circle-dot radio-btn"></i></div>
-                            <div class="panel-option"><span>12</span><i class="fa-regular fa-circle-dot radio-btn"></i></div>
-                            <div class="panel-option"><span>13</span><i class="fa-regular fa-circle-dot radio-btn"></i></div>
-                            <div class="panel-option"><span>14</span><i class="fa-regular fa-circle-dot radio-btn"></i></div>
-                            <div class="panel-option"><span>15</span><i class="fa-regular fa-circle-dot radio-btn"></i></div> -->
+                          
                         </div>
 
                         <div class="range-panel hide" id="max-price-panel">
-                            <!-- <div class="panel-option"><span>Max</span><i class="fa-regular fa-circle-dot radio-btn"></i></div>
-                            <div class="panel-option"><span>1</span><i class="fa-regular fa-circle-dot radio-btn"></i></div>
-                            <div class="panel-option"><span>2</span><i class="fa-regular fa-circle-dot radio-btn"></i></div>
-                            <div class="panel-option"><span>3</span><i class="fa-regular fa-circle-dot radio-btn"></i></div>
-                            <div class="panel-option"><span>4</span><i class="fa-regular fa-circle-dot radio-btn"></i></div>
-                            <div class="panel-option"><span>5</span><i class="fa-regular fa-circle-dot radio-btn"></i></div>
-                            <div class="panel-option"><span>6</span><i class="fa-regular fa-circle-dot radio-btn"></i></div>
-                            <div class="panel-option"><span>7</span><i class="fa-regular fa-circle-dot radio-btn"></i></div>
-                            <div class="panel-option"><span>8</span><i class="fa-regular fa-circle-dot radio-btn"></i></div>
-                            <div class="panel-option"><span>9</span><i class="fa-regular fa-circle-dot radio-btn"></i></div>
-                            <div class="panel-option"><span>10</span><i class="fa-regular fa-circle-dot radio-btn"></i></div>
-                            <div class="panel-option"><span>11</span><i class="fa-regular fa-circle-dot radio-btn"></i></div>
-                            <div class="panel-option"><span>12</span><i class="fa-regular fa-circle-dot radio-btn"></i></div>
-                            <div class="panel-option"><span>13</span><i class="fa-regular fa-circle-dot radio-btn"></i></div>
-                            <div class="panel-option"><span>14</span><i class="fa-regular fa-circle-dot radio-btn"></i></div>
-                            <div class="panel-option"><span>15</span><i class="fa-regular fa-circle-dot radio-btn"></i></div> -->
+                          
                         </div>
 
                         <div class="range-panel hide" id="min-beds-panel">

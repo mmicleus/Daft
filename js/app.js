@@ -12,6 +12,7 @@ import * as Input from './input.js';
 
 
 
+
 export async function update(){
     let properties = await Api.getProperties();
     View.refreshView(properties);

@@ -266,3 +266,181 @@ header{
     
 }
 
+
+.filters-view{
+    height:100vh;
+    width:100vw;
+    background-color: #fff;
+    padding:2rem 1rem 4rem 1rem;
+
+    position:fixed;
+    left:0;
+    top:0;
+    z-index:1000;
+
+    .close-container{
+        text-align:right;
+    }
+
+    .input-trigger{
+        width:100%;
+        padding:1rem 1.5rem;
+        background-color: #eee;
+        display:flex;
+        justify-content: space-between;
+        cursor: pointer;
+
+        span:nth-child(1){
+            color:#555;
+        }
+
+        span:nth-child(2){
+            color:#aaa;
+        }
+    }
+
+    .input-trigger.hide{
+        display: none;
+    }
+
+    .totalPropertiesDisplay_container{
+        position: fixed;
+        bottom:2rem;
+        left:0;
+
+        display: flex;
+        justify-content: center;
+        width:100%;
+    }
+
+    .totalPropertiesDisplay{
+        background-color: blue;
+        color:#fff;
+        text-align:center;
+        font-weight:bold;
+        padding:1rem 0;
+        width:95%;
+    }
+
+    .inputs-container{
+        width:100%;
+    }
+
+    //Locations-input-container
+
+    .locations-input-container{
+        width:100%;
+        margin:auto;
+        padding:1rem;
+        /* height:25vh; */
+    
+        background-color:#fff;
+        /* box shadow */
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        border-radius: 5px;
+    
+        position:relative;
+    }
+
+    .locations-input-container.hide{
+        display: none;
+    }
+    
+    .location-cards-container{
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 0.6rem;
+        row-gap:0.6rem;
+    
+        margin-bottom:1rem;
+    }
+    
+    .location-card{
+        padding:0.5rem;
+        border-radius:5px;
+        color:blue;
+        font-weight: bold;
+        font-size:0.8rem;
+        text-transform: uppercase;
+        border:1px solid blue;
+        display: inline-block;
+    }
+    
+    .locations-input{
+        border:none;
+        background-color: #fff;
+        outline: none;
+        font-size: 1.2rem;
+    
+        margin-bottom:1rem;
+    }
+    
+    .btn-container{
+        display: flex;
+        justify-content: right;
+    }
+    
+    .filters-view__btn{
+        padding:0.5rem 1rem;
+        background-color: #fff;
+        border:1px solid #bbb;
+        border-radius:3px;
+    
+        margin-left:auto;
+    }
+    
+    .suggestions-list{
+        position: absolute;
+        top:98%;
+        left:0;
+    
+        width:100%;
+        background-color: blue;
+    
+    
+        padding:1rem 0;
+    
+        background-color:#fff;
+        /* box shadow */
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    
+    
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+    
+    .suggestions-list.hide{
+        display: none;
+    }
+    
+    .suggestion{
+        padding:0.5rem 1rem;
+    
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .suggestion:nth-child(1){
+        background-color: #ddd;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+    //End of Locations-input-container
+
+
+
+
+}
+
+
+

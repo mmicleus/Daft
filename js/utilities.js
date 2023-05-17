@@ -1,3 +1,6 @@
+import * as Data from './data.js'
+import * as Api from './api.js'
+
 export function clamp(num,min,max){
     return Math.min(Math.max(num, min), max);
 }
@@ -31,3 +34,45 @@ export function getValueByParameter(parameter,value){
         return value;
     }
 }
+
+export function SwapElements(toHide,toShow){
+    if(toHide){
+        toHide.classList.add("hide");
+    }
+
+    if(toShow){
+        toShow.classList.remove("hide");
+    }
+}
+
+export function createUrl(base,queryParams){
+    return base + '?' + new URLSearchParams(queryParams).toString();
+}
+
+export function getQueryParametersCopy(){
+
+let parameters = Api.queryParameters;
+let newParameters= {};
+
+for(let key in parameters){
+    if(key != "offset" && key != "limit" && key != "city" && key != "state_code" && parameters[key] != null){
+        newParameters[key] = parameters[key];
+    }
+}
+
+return newParameters
+}
+
+
+// export async function computeTotalProperties(){
+//     let urls = Data.propertiesRequestData.urls;
+//     let searchUrl = createUrl(Data.propertyCountUrl,Data.propertySearchQueryParams);
+//     // https://us-real-estate.p.rapidapi.com/v2/for-sale-result-count
+
+//     for(let i = 0;i < urls.length;i++){
+//         let link = createUrl2()
+//     }
+
+//     return 
+// }
+

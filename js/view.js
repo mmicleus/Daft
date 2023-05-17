@@ -12,6 +12,8 @@ const maxPricePanel = document.querySelector('#max-price-panel');
 const minBedsPanel = document.querySelector('#min-beds-panel');
 const maxBedsPanel = document.querySelector('#max-beds-panel');
 
+const totalPropertiesDisplay = document.querySelector('.totalPropertiesDisplay');
+
 function renderHouse({imgSrc,streetAddress,state,city,price,bedrooms,bathrooms,livingArea}){
 
     let houseCard = document.createElement('div');
@@ -91,6 +93,16 @@ export function renderProperties(properties){
     })
 }
 
+export function addLocationCard(slugId){
+    let elem = document.createElement('div');
+    elem.classList.add('location-card');
+    elem.innerHTML = `<span>${slugId}</span>`;
+    elem.dataset.slugId = slugId;
+    elem.addEventListener('click',Input.locationCardPressed)
+
+    document.querySelector('.location-cards-container').append(elem);
+}
+
 function updatePageIndexes(){
     // console.log(jsonResponse);
     let count = Number.parseInt(Api.jsonResponse.data.home_search.count);
@@ -118,6 +130,23 @@ export function refreshView(properties){
     renderProperties(properties);
     updatePageIndexes();
 
+}
+
+export function displayTotalProperties(total){
+    totalPropertiesDisplay.textContent = total;
+}
+
+function generateBtn(loc){
+    let elem = document.createElement('div');
+
+    elem.classList.add('suggestion');
+    elem.innerHTML = `<span>${loc.slug_id}</span> <i class="fa-solid fa-plus"></i>`;
+    elem.dataset.slugId = loc.slug_id;
+    elem.dataset.city = loc.city;
+    elem.dataset.state_code = loc.state_code;
+    elem.addEventListener('click',Input.handleLocationBtnClick);
+
+    return elem;
 }
 
 
@@ -151,6 +180,25 @@ function renderOptions(container,list,keyword,param){
 
 }
 
+export async function generateSuggestionsDropdown(event){
+    const suggestionsContainer = document.querySelector(".suggestions-list");
+    let value = event.currentTarget.value;
+    Data.suggestionQueryParams.input = value;
+
+    let url = Utility.createUrl(Data.suggestionUrl,Data.suggestionQueryParams);
+    let suggestedLocations = await Api.getSuggestions(url);
+
+    
+    suggestionsContainer.innerHTML="";
+
+    suggestedLocations.forEach((loc) => {
+        let locationBtn = generateBtn(loc);
+
+        suggestionsContainer.appendChild(locationBtn);
+    })
+
+}   
+
 
 
 function onStart(){
@@ -161,4 +209,4 @@ function onStart(){
     renderOptions(maxBedsPanel,Data.beds,'Max',"beds_max");
 }
 
-onStart();
+setTimeout(()=>{onStart()},1000);
